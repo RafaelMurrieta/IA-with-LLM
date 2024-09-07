@@ -71,7 +71,7 @@ button:focus-visible {
   background-color: #212121;
   max-width: 90%;
   height: 70vh;
-  border: 1px solid #ccc; 
+  /* border: 1px solid #ccc;  */
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 8px;
@@ -91,7 +91,23 @@ button:focus-visible {
     gap: 4px;
     margin: 4px 0;
     padding: 4px 8px;
+
+    > span:first-child{
+        width:  36px;
+        height: 36px;
+        background-color: #2b2b2b;
+        font-size: 12px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 200px;
+    }
+    > span:last-child{
+      padding: 4px 8px;
+    }
   }
+  
 }
 form{
   display: flex;
