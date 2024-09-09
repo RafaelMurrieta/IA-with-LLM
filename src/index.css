@@ -71,13 +71,15 @@ button:focus-visible {
   background-color: #212121;
   max-width: 90%;
   height: 70vh;
-  /* border: 1px solid #ccc;  */
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 8px;
   margin-bottom: 16px;
-  overflow-y: auto;
 
+  .chat-body{
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
   ul{
     display: flex;
     flex-direction: column;
@@ -104,7 +106,22 @@ button:focus-visible {
         border-radius: 200px;
     }
     > span:last-child{
+      border-radius: 10px;
       padding: 4px 8px;
+    }
+
+    &.user{
+      align-self: flex-end;
+      align-items: flex-end;
+      span{
+        background-color: rgb(80, 152, 128);
+      }
+    }
+    &.bot{
+      align-self: flex-start;
+      span{
+      background-color: #2b2b2b;
+      }
     }
   }
   
@@ -112,5 +129,30 @@ button:focus-visible {
 form{
   display: flex;
   flex-direction: row;
+  input{
+    border-radius: 9999px;
+    flex-grow: 1;
+    border: 0;
+    width: 370px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+  }
+  button{
+    background-color: #509880;
+    border: 0;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    &:hover{
+      background-color: #387963;
+    }
+    &[disabled]{
+      cursor: not-allowed;
+      background-color: #509880;
+      opacity: 0.5;
+    }
+  }
   
 }
